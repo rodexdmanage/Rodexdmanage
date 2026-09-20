@@ -1,118 +1,158 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="es">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Rodexdmanage</title>
-  <style>
-    :root {
-      color-scheme: light dark;
-      --bg: #0f172a;
-      --surface: rgba(15, 23, 42, 0.75);
-      --text: #e2e8f0;
-      --muted: #cbd5e1;
-      --accent: #38bdf8;
-      --accent-strong: #0ea5e9;
-    }
-
-    * {
-      box-sizing: border-box;
-    }
-
-    body {
-      margin: 0;
-      min-height: 100vh;
-      display: grid;
-      place-items: center;
-      padding: 24px;
-      font-family: Arial, Helvetica, sans-serif;
-      background:
-        radial-gradient(circle at top, rgba(56, 189, 248, 0.28), transparent 35%),
-        linear-gradient(135deg, #020617, #0f172a 55%, #1e293b);
-      color: var(--text);
-    }
-
-    main {
-      width: min(720px, 100%);
-      padding: 48px;
-      border-radius: 24px;
-      background: var(--surface);
-      backdrop-filter: blur(10px);
-      box-shadow: 0 20px 45px rgba(15, 23, 42, 0.35);
-      text-align: center;
-    }
-
-    h1 {
-      margin: 0 0 16px;
-      font-size: clamp(2.5rem, 5vw, 4rem);
-    }
-
-    p {
-      margin: 0 auto 16px;
-      max-width: 38rem;
-      line-height: 1.6;
-      color: var(--muted);
-      font-size: 1.1rem;
-    }
-
-    .actions {
-      display: flex;
-      justify-content: center;
-      gap: 16px;
-      margin-top: 32px;
-      flex-wrap: wrap;
-    }
-
-    a {
-      display: inline-block;
-      padding: 14px 22px;
-      border-radius: 999px;
-      text-decoration: none;
-      font-weight: 700;
-      transition: transform 0.2s ease, background-color 0.2s ease;
-    }
-
-    a.primary {
-      background: var(--accent);
-      color: #082f49;
-    }
-
-    a.secondary {
-      border: 1px solid rgba(226, 232, 240, 0.28);
-      color: var(--text);
-    }
-
-    a:hover {
-      transform: translateY(-2px);
-    }
-
-    a.primary:hover {
-      background: var(--accent-strong);
-      color: #e0f2fe;
-    }
-
-    footer {
-      margin-top: 28px;
-      font-size: 0.95rem;
-      color: var(--muted);
-    }
-  </style>
+  <meta name="description" content="Salon Exd - nails y tratamientos capilares personalizados en Guatemala.">
+  <title>Salon Exd | Nails & hair care</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <header class="site-header">
+    <a class="brand" href="#inicio" aria-label="Salon Exd inicio">
+      <span class="brand-mark">EXD</span>
+      <span class="brand-subtitle">SALON & BEAUTY</span>
+    </a>
+    <nav class="main-nav" aria-label="Navegación principal">
+      <a href="#nosotros">EXD</a>
+      <a href="#galeria">Portfolio</a>
+      <a href="#servicios">Servicios</a>
+      <a href="#ubicaciones">Ubicaciones</a>
+      <a href="#reservar">Contacto</a>
+    </nav>
+    <a class="header-cta" href="#reservar">Reservar <span>↗</span></a>
+    <button class="menu-toggle" type="button" aria-label="Abrir menú" aria-expanded="false">☰</button>
+  </header>
+
   <main>
-    <h1>Welcome to Rodexdmanage</h1>
-    <p>
-      This is a simple website for the Rodexdmanage repository. Use it as a starting
-      point for sharing your work, highlighting projects, or linking to your profiles.
-    </p>
-    <p>
-      Update the text, colors, and links to make it your own.
-    </p>
-    <div class="actions">
-      <a class="primary" href="https://github.com/rodexdmanage" target="_blank" rel="noreferrer">View GitHub</a>
-      <a class="secondary" href="README.md">Open README</a>
-    </div>
-    <footer>Built as a lightweight static homepage.</footer>
+    <section class="hero" id="inicio">
+      <div class="hero-copy">
+        <p class="eyebrow">Guatemala City · 2+ años de belleza</p>
+        <h1>Tu mejor<br><em>versión</em> empieza<br>aquí.</h1>
+        <p class="hero-text">Un espacio para reconectar contigo, cuidar de ti y salir sintiéndote increíble.</p>
+        <a class="button button-dark" href="#reservar">Agenda tu cita <span>↗</span></a>
+      </div>
+      <div class="hero-photo" role="img" aria-label="Interior luminoso de Salon Exd">
+        <div class="photo-note"><span>01</span><i></i><span>NAILS, HAIR<br>& CARE</span></div>
+      </div>
+      <div class="hero-scroll"><span>Scroll to explore</span><i></i></div>
+    </section>
+
+    <section class="intro section-pad" id="nosotros">
+      <div class="section-kicker">01 / Nuestra esencia</div>
+      <div class="intro-content">
+        <h2>Más que un salón,<br><em>un ritual para ti.</em></h2>
+        <div class="intro-copy">
+          <p>Creemos que la belleza no se trata de cambiar quién eres, sino de cuidar y resaltar todo aquello que te hace única.</p>
+          <a class="text-link" href="#historia">Conoce nuestra historia <span>↗</span></a>
+        </div>
+      </div>
+      <div class="stats">
+        <div><strong>2+</strong><span>años creando<br>momentos</span></div>
+        <div><strong>100%</strong><span>dedicación<br>personalizada</span></div>
+        <div><strong>∞</strong><span>looks para<br>inspirarte</span></div>
+      </div>
+    </section>
+
+    <section class="gallery section-pad" id="galeria">
+      <div class="section-heading gallery-heading"><div class="section-kicker">02 / Portfolio</div><h2>Detalles que<br><em>se sienten.</em></h2><a class="text-link" href="https://www.instagram.com/salonexd.gt" target="_blank" rel="noreferrer">Ver más en Instagram <span>↗</span></a></div>
+      <div class="gallery-grid">
+        <div class="gallery-image gallery-tall" role="img" aria-label="Detalle de manicure"></div>
+        <div class="gallery-image gallery-wide" role="img" aria-label="Cuidado de manos y uñas"></div>
+        <div class="gallery-image gallery-small" role="img" aria-label="Tratamiento de cabello"></div>
+      </div>
+    </section>
+
+    <section class="services section-pad" id="servicios">
+      <div class="section-heading">
+        <div class="section-kicker">03 / Servicios</div>
+        <h2>Cuidado hecho<br><em>para ti.</em></h2>
+        <p>Elige tu próximo momento de cuidado. Los precios finales pueden variar según el servicio.</p>
+      </div>
+      <div class="service-list" aria-label="Servicios y precios">
+        <a class="service-row" href="#reservar"><span class="service-number">01</span><span class="service-name">Tratamientos capilares</span><span class="service-detail">Desde Q —</span><span class="service-arrow">↗</span></a>
+        <a class="service-row" href="#reservar"><span class="service-number">02</span><span class="service-name">Manicure</span><span class="service-detail">Desde Q —</span><span class="service-arrow">↗</span></a>
+        <a class="service-row" href="#reservar"><span class="service-number">03</span><span class="service-name">Pedicure</span><span class="service-detail">Desde Q —</span><span class="service-arrow">↗</span></a>
+        <a class="service-row" href="#reservar"><span class="service-number">04</span><span class="service-name">Uñas</span><span class="service-detail">Desde Q —</span><span class="service-arrow">↗</span></a>
+      </div>
+    </section>
+
+    <section class="tiktok-showcase section-pad" id="tiktok">
+      <div class="section-heading">
+        <div class="section-kicker">02 / TikTok</div>
+        <h2>Más que belleza,<br><em>más que trends.</em></h2>
+        <a class="text-link" href="https://www.tiktok.com/@exd.gt" target="_blank" rel="noreferrer">Follow @exd.gt <span>↗</span></a>
+      </div>
+      <div class="tiktok-stage" aria-label="TikTok preview section">
+        <div class="tiktok-strip">
+          <article class="tiktok-card tiktok-card-dark">
+            <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@exd.gt" data-video-id="7669981409305709844" style="max-width: 605px; min-width: 325px;"> <section> </section> </blockquote>
+            <script async src="https://www.tiktok.com/embed.js"></script>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="locations section-pad" id="ubicaciones">
+      <div class="section-heading">
+        <div class="section-kicker">03 / Encuéntranos</div>
+        <h2>Tu momento,<br><em>más cerca.</em></h2>
+        <p>Elige la ubicación que te quede mejor y llega con la aplicación que prefieras.</p>
+      </div>
+      <div class="location-grid">
+        <article class="location-card">
+          <span class="location-number">01</span>
+          <h3>Zona 10</h3>
+          <p>Ciudad de Guatemala<br>Lun — Sáb · 9:00 — 19:00</p>
+          <nav class="location-links" aria-label="Elegir aplicación de mapas para Zona 10"><a href="https://maps.apple.com/place?map=explore&place-id=IBE4F55609AF9DD6C&address=14+calle%2C+Guatemala+City%2C+Guatemala&Coordinate=14.680928%2C-90.545282&name=Exd+Nails+Studio&_provider=9902" target="_blank" rel="noopener noreferrer">Apple Maps</a><a href="https://www.google.com/maps/search/?api=1&query=14.680928%2C-90.545282" target="_blank" rel="noopener noreferrer">Google Maps</a><a href="https://www.waze.com/ul?ll=14.680928%2C-90.545282&navigate=yes" target="_blank" rel="noopener noreferrer">Waze</a></nav>
+        </article>
+        <article class="location-card location-card-pending">
+          <span class="location-number">02</span>
+          <h3>San Cris</h3>
+          <p>Nueva ubicación<br>Próximamente</p>
+          <span class="location-status">Detalles de ubicación por confirmar</span>
+        </article>
+      </div>
+    </section>
+
+    <section class="booking" id="reservar">
+      <div class="booking-content">
+        <div class="section-kicker">04 / Hablemos</div>
+        <h2>Tu próximo<br><em>favorite look.</em></h2>
+        <p>Cuéntanos qué tienes en mente. Nuestro equipo te ayudará a encontrar el servicio ideal para tus uñas o cabello.</p>
+        <div class="contact-links">
+          <a class="button button-light" href="https://wa.me/50241539640" target="_blank" rel="noreferrer">WhatsApp principal <span>↗</span></a>
+          <div class="contact-numbers">
+            <a href="tel:+50241539640">+502 4153 9640</a>
+            <a href="tel:+50242850112">+502 4285 0112</a>
+          </div>
+        </div>
+      </div>
+      <div class="booking-side"><span>¿Tienes preguntas?</span><a href="#contacto">Hablemos <b>↗</b></a></div>
+    </section>
+
+    <section class="owner-story section-pad" id="historia">
+      <div class="owner-image" role="img" aria-label="Detalle del trabajo de uñas en Salon Exd"></div>
+      <div class="owner-copy">
+        <div class="section-kicker">05 / La historia</div>
+        <h2>Hecho con<br><em>intención.</em></h2>
+        <p>Para Dayana, fundadora de EXD, todo comenzó como un sueño. Hoy ese sueño se ha convertido en dos ubicaciones y una comunidad que sigue creciendo.</p>
+        <p>Guatemalteca, mujer de familia y profundamente dedicada a los suyos, Dayana siempre ha encontrado fuerza en el amor y el apoyo de su familia. También fue parte de la selección guatemalteca de handball, hasta que una lesión la obligó a hacer una pausa. Después de una cirugía y un largo proceso de recuperación, volvió a ponerse de pie.</p>
+        <p>Lo que alguna vez pareció imposible, Dayana lo transformó en una nueva oportunidad para avanzar, inspirar y hacer que todo pareciera posible.</p>
+        <span class="owner-signature">Con cariño, Dayana</span>
+      </div>
+    </section>
   </main>
+
+  <footer class="site-footer" id="contacto">
+    <div class="footer-brand"><span class="brand-mark">EXD</span><span class="brand-subtitle">SALON & BEAUTY</span></div>
+    <div class="footer-locations"><span>Visítanos</span><div class="location-item"><strong>Zona 10</strong><p>Ciudad de Guatemala<br>Lun — Sáb · 9:00 — 19:00</p><nav class="location-links" aria-label="Elegir aplicación de mapas para Zona 10"><a href="https://maps.apple.com/place?map=explore&place-id=IBE4F55609AF9DD6C&address=14+calle%2C+Guatemala+City%2C+Guatemala&Coordinate=14.680928%2C-90.545282&name=Exd+Nails+Studio&_provider=9902" target="_blank" rel="noopener noreferrer">Apple Maps</a><a href="https://www.google.com/maps/search/?api=1&query=14.680928%2C-90.545282" target="_blank" rel="noopener noreferrer">Google Maps</a><a href="https://www.waze.com/ul?ll=14.680928%2C-90.545282&navigate=yes" target="_blank" rel="noopener noreferrer">Waze</a></nav></div><div class="location-item"><strong>San Cris</strong><p>Ubicación próximamente</p></div></div>
+    <div class="footer-social"><span>Síguenos</span><a href="https://www.instagram.com/salonexd.gt" target="_blank" rel="noreferrer">@salonexd.gt ↗</a><a href="https://www.tiktok.com/@exd.gt" target="_blank" rel="noreferrer">@exd.gt ↗</a></div>
+    <div class="footer-bottom"><span>© 2026 Salon Exd</span><span>Beauty made personal.</span></div>
+  </footer>
+  <script src="script.js"></script>
 </body>
 </html>
